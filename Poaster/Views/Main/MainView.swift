@@ -28,8 +28,8 @@ struct MainView: View {
                     ideal: Constants.UI.sidebarIdealWidth
                 )
         } detail: {
-            if let item = selectedThreadItem {
-                ComposerView(item: item, draft: selectedDraft!)
+            if let item = selectedThreadItem, let draft = selectedDraft {
+                ComposerView(item: item, draft: draft)
             } else if selectedDraft != nil {
                 ContentUnavailableView(
                     "Select a Post",
